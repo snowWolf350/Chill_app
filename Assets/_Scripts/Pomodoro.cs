@@ -69,5 +69,7 @@ public class Pomodoro : MonoBehaviour
     private void UpdateCountDownUI()
     {
         CountDownText.text = String.Concat(minutes.ToString(), ":", seconds.ToString("F0"));
+        if(seconds <1)
+        CountDownText.text = String.Concat(minutes.ToString(), ":", "00");
     }
 }
