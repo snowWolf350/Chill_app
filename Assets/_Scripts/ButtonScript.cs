@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -7,8 +8,11 @@ public class ButtonScript : MonoBehaviour
     [SerializeField] Button toggleButton;
     [SerializeField] Button closeButton;
 
-    private bool TemplateState = true;
-    private void Awake()
+    protected bool TemplateState = true;
+
+    public event EventHandler OnTabClosed;
+    public event EventHandler OnTabToggled;
+    protected virtual void Awake()
     {
         toggleButton.onClick.AddListener(() =>
         {
@@ -17,6 +21,7 @@ public class ButtonScript : MonoBehaviour
             {
                 GO.SetActive(TemplateState);
             }
+            OnTabToggled?.Invoke(this, EventArgs.Empty);
         });
         closeButton.onClick.AddListener(() =>
         {
@@ -25,6 +30,7 @@ public class ButtonScript : MonoBehaviour
             {
                 GO.SetActive(false);
             }
+            OnTabClosed?.Invoke(this, EventArgs.Empty);
         });
     }
 }

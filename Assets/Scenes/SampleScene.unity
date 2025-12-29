@@ -956,7 +956,7 @@ GameObject:
   - component: {fileID: 273907668}
   - component: {fileID: 273907667}
   m_Layer: 5
-  m_Name: Button
+  m_Name: TaskToggle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -975,11 +975,11 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1153900421}
-  m_Father: {fileID: 919151974}
+  m_Father: {fileID: 1946264035}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 850, y: 62}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &273907667
@@ -1315,6 +1315,7 @@ GameObject:
   m_Component:
   - component: {fileID: 373668099}
   - component: {fileID: 373668100}
+  - component: {fileID: 373668101}
   m_Layer: 5
   m_Name: Pomodoro
   m_TagString: Untagged
@@ -1332,7 +1333,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 993723510}
   - {fileID: 1109007375}
@@ -1357,11 +1358,40 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 976d4cebafb2c0a479276fe59b546a3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Pomodoro
+  Template:
+  - {fileID: 993723509}
+  - {fileID: 1109007374}
+  - {fileID: 1904157512}
+  - {fileID: 1708660578}
+  toggleButton: {fileID: 1990790970}
+  closeButton: {fileID: 1708660579}
   CountDownText: {fileID: 127303496}
   StartButton: {fileID: 76056847}
   ResetButton: {fileID: 838875676}
   IncreaseButton: {fileID: 918689890}
   DecreaseButton: {fileID: 43662771}
+--- !u!95 &373668101
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 373668098}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9d6234a331ac6c14694de29a32b1379c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &463112161
 GameObject:
   m_ObjectHideFlags: 0
@@ -1512,7 +1542,7 @@ GameObject:
   - component: {fileID: 502812257}
   - component: {fileID: 502812256}
   m_Layer: 5
-  m_Name: Button
+  m_Name: AffirmationToggle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1531,11 +1561,11 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1823287578}
-  m_Father: {fileID: 655185834}
+  m_Father: {fileID: 1946264035}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 850, y: 200}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &502812256
@@ -2389,62 +2419,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 628963181}
   m_CullTransparentMesh: 1
---- !u!1 &655185833
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 655185834}
-  - component: {fileID: 655185835}
-  m_Layer: 5
-  m_Name: AffirmationsButton
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &655185834
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 655185833}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 502812255}
-  m_Father: {fileID: 1946264035}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 850, y: 200}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &655185835
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 655185833}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0fe4e79088e719749b376e030c691f7d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ButtonScript
-  Template:
-  - {fileID: 2095403034}
-  - {fileID: 1144746253}
-  - {fileID: 928543407}
-  - {fileID: 1394814000}
-  toggleButton: {fileID: 502812256}
-  closeButton: {fileID: 1394814001}
 --- !u!1 &659773680
 GameObject:
   m_ObjectHideFlags: 0
@@ -2962,6 +2936,7 @@ GameObject:
   m_Component:
   - component: {fileID: 812631733}
   - component: {fileID: 812631734}
+  - component: {fileID: 812631735}
   m_Layer: 5
   m_Name: Affirmations
   m_TagString: Untagged
@@ -3004,6 +2979,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cae733efe7cb2b641b49f3d912ef106a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Afirmations
+  Template:
+  - {fileID: 2095403034}
+  - {fileID: 1144746253}
+  - {fileID: 928543407}
+  - {fileID: 1394814000}
+  toggleButton: {fileID: 502812256}
+  closeButton: {fileID: 1394814001}
   NewQuoteButton: {fileID: 980724338}
   QuoteText: {fileID: 7867693}
   QuotesList:
@@ -3011,6 +2993,28 @@ MonoBehaviour:
   - Keep going
   - Im here for you
   - progress takes time
+--- !u!95 &812631735
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 812631732}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9d6234a331ac6c14694de29a32b1379c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &838875674
 GameObject:
   m_ObjectHideFlags: 0
@@ -3326,62 +3330,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 918689888}
   m_CullTransparentMesh: 1
---- !u!1 &919151973
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 919151974}
-  - component: {fileID: 919151975}
-  m_Layer: 5
-  m_Name: TaskButton
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &919151974
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 919151973}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 273907666}
-  m_Father: {fileID: 1946264035}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 850, y: 62}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &919151975
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 919151973}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0fe4e79088e719749b376e030c691f7d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ButtonScript
-  Template:
-  - {fileID: 1731701630}
-  - {fileID: 1511975957}
-  - {fileID: 2108179097}
-  - {fileID: 1294963751}
-  toggleButton: {fileID: 273907667}
-  closeButton: {fileID: 1294963753}
 --- !u!1 &928543407
 GameObject:
   m_ObjectHideFlags: 0
@@ -4019,62 +3967,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &1120750250
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1120750251}
-  - component: {fileID: 1120750252}
-  m_Layer: 5
-  m_Name: PomodoroButton
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1120750251
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1120750250}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1990790969}
-  m_Father: {fileID: 1946264035}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 850, y: 325}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1120750252
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1120750250}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0fe4e79088e719749b376e030c691f7d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ButtonScript
-  Template:
-  - {fileID: 993723509}
-  - {fileID: 1904157512}
-  - {fileID: 1109007374}
-  - {fileID: 1708660578}
-  toggleButton: {fileID: 1990790970}
-  closeButton: {fileID: 1708660579}
 --- !u!1 &1144746253
 GameObject:
   m_ObjectHideFlags: 0
@@ -6158,9 +6050,9 @@ RectTransform:
   - {fileID: 373668099}
   - {fileID: 812631733}
   - {fileID: 128520413}
-  - {fileID: 1120750251}
-  - {fileID: 655185834}
-  - {fileID: 919151974}
+  - {fileID: 1990790969}
+  - {fileID: 502812255}
+  - {fileID: 273907666}
   - {fileID: 689220519}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6332,7 +6224,7 @@ GameObject:
   - component: {fileID: 1990790971}
   - component: {fileID: 1990790970}
   m_Layer: 5
-  m_Name: Button
+  m_Name: PomodoroToggle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6351,11 +6243,11 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1281106426}
-  m_Father: {fileID: 1120750251}
+  m_Father: {fileID: 1946264035}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 850, y: 325}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1990790970

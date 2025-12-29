@@ -3,7 +3,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Pomodoro : MonoBehaviour
+public class Pomodoro : ButtonScript
 {
     [Header("Text")]
     [SerializeField] TextMeshProUGUI CountDownText;
@@ -13,13 +13,18 @@ public class Pomodoro : MonoBehaviour
     [SerializeField] Button IncreaseButton;
     [SerializeField] Button DecreaseButton;
 
+    Animator animator;
+
     float minutes;
     float seconds;
 
     bool isCounting = false;
 
-    private void Awake()
+    const string IS_OPEN = "isOpen";
+
+    protected override void Awake()
     {
+        base.Awake();
         StartButton.onClick.AddListener(() =>
         {
             isCounting = !isCounting;
@@ -48,6 +53,19 @@ public class Pomodoro : MonoBehaviour
         minutes = 25;
         seconds = 0;
         UpdateCountDownUI();
+        animator = GetComponent<Animator>();
+        base.OnTabClosed += Pomodoro_OnTabClosed;
+        base.OnTabToggled += Pomodoro_OnTabToggled;
+    }
+
+    private void Pomodoro_OnTabToggled(object sender, EventArgs e)
+    {
+        Animatewindow();
+    }
+
+    private void Pomodoro_OnTabClosed(object sender, EventArgs e)
+    {
+        Animatewindow();
     }
 
     private void Update()
@@ -72,5 +90,9 @@ public class Pomodoro : MonoBehaviour
         CountDownText.text = String.Concat(minutes.ToString(), ":", seconds.ToString("F0"));
         if(seconds <1)
         CountDownText.text = String.Concat(minutes.ToString(), ":", "00");
+    }
+    private void Animatewindow()
+    {
+        animator.SetBool(IS_OPEN, base.TemplateState);
     }
 }
