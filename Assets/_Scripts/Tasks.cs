@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Collections.Generic;
 
-public class Tasks : MonoBehaviour
+public class Tasks : ButtonScript
 {
     [SerializeField] TMP_InputField TaskInput;
     [SerializeField] Button CreateButton;
@@ -12,8 +12,14 @@ public class Tasks : MonoBehaviour
 
     List<TaskTemplate> taskList;
     string taskString;
-    private void Awake()
+
+    Animator animator;
+
+    const string IS_OPEN = "isOpen";
+
+    protected override void Awake()
     {
+        base.Awake();
         taskList = new List<TaskTemplate>();
         TaskInput.onValueChanged.AddListener((string text) =>
         {
@@ -37,5 +43,21 @@ public class Tasks : MonoBehaviour
     private void Start()
     {
         taskTemplate.gameObject.SetActive(false);
+        base.OnTabClosed += Afirmations_OnTabClosed;
+        base.OnTabToggled += Afirmations_OnTabToggled;
+        animator = GetComponent<Animator>();
+    }
+    private void Afirmations_OnTabToggled(object sender, System.EventArgs e)
+    {
+        Animatewindow();
+    }
+
+    private void Afirmations_OnTabClosed(object sender, System.EventArgs e)
+    {
+        Animatewindow();
+    }
+    private void Animatewindow()
+    {
+        animator.SetBool(IS_OPEN, base.TemplateState);
     }
 }

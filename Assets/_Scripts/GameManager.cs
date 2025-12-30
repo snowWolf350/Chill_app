@@ -3,15 +3,22 @@ using System.Collections.Generic;
 
 public class GameManager : MonoBehaviour
 {
-    private int currentExp =0;
+    private int currentExp;
     private int MaxExp;
-    private int level = 1;
+    private int level;
 
     [SerializeField] StatsUI StatsUI;
     [SerializeField] List<LevelSO> LevelSoList;
 
+    const string CURRENTLEVEL = "currentLevel";
+    const string CURRENTEXP = "currentExp";
+
     private void Start()
     {
+        currentExp = PlayerPrefs.GetInt(CURRENTEXP);
+        if (level == 0)
+            LevelUp();
+        level = PlayerPrefs.GetInt(CURRENTLEVEL);
         TaskTemplate.OnTaskCompleted += TaskTemplate_OnTaskCompleted;
         MaxExp = 100;
         StatsUI.updateExpUI(currentExp, MaxExp, level);
@@ -40,6 +47,8 @@ public class GameManager : MonoBehaviour
         {
             LevelUp();
         }
+        PlayerPrefs.SetInt(CURRENTLEVEL, level);
+        PlayerPrefs.SetInt(CURRENTEXP,currentExp);
     }
     public void LevelUp()
     {
@@ -53,6 +62,8 @@ public class GameManager : MonoBehaviour
             }
         }
         StatsUI.updateExpUI(currentExp, MaxExp, level);
+        PlayerPrefs.SetInt(CURRENTLEVEL, level);
+        PlayerPrefs.SetInt(CURRENTEXP, currentExp);
     }
     [ContextMenu("increase xp")]
     public void increaseXPMax()
