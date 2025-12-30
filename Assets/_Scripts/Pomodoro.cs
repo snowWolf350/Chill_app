@@ -13,14 +13,10 @@ public class Pomodoro : ButtonScript
     [SerializeField] Button IncreaseButton;
     [SerializeField] Button DecreaseButton;
 
-    Animator animator;
-
     float minutes;
     float seconds;
 
     bool isCounting = false;
-
-    const string IS_OPEN = "isOpen";
 
     protected override void Awake()
     {
@@ -53,21 +49,7 @@ public class Pomodoro : ButtonScript
         minutes = 25;
         seconds = 0;
         UpdateCountDownUI();
-        animator = GetComponent<Animator>();
-        base.OnTabClosed += Pomodoro_OnTabClosed;
-        base.OnTabToggled += Pomodoro_OnTabToggled;
     }
-
-    private void Pomodoro_OnTabToggled(object sender, EventArgs e)
-    {
-        Animatewindow();
-    }
-
-    private void Pomodoro_OnTabClosed(object sender, EventArgs e)
-    {
-        Animatewindow();
-    }
-
     private void Update()
     {
         if(isCounting)
@@ -90,9 +72,5 @@ public class Pomodoro : ButtonScript
         CountDownText.text = String.Concat(minutes.ToString(), ":", seconds.ToString("F0"));
         if(seconds <1)
         CountDownText.text = String.Concat(minutes.ToString(), ":", "00");
-    }
-    private void Animatewindow()
-    {
-        animator.SetBool(IS_OPEN, base.TemplateState);
     }
 }

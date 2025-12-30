@@ -13,10 +13,6 @@ public class Tasks : ButtonScript
     List<TaskTemplate> taskList;
     string taskString;
 
-    Animator animator;
-
-    const string IS_OPEN = "isOpen";
-
     protected override void Awake()
     {
         base.Awake();
@@ -43,21 +39,5 @@ public class Tasks : ButtonScript
     private void Start()
     {
         taskTemplate.gameObject.SetActive(false);
-        base.OnTabClosed += Afirmations_OnTabClosed;
-        base.OnTabToggled += Afirmations_OnTabToggled;
-        animator = GetComponent<Animator>();
-    }
-    private void Afirmations_OnTabToggled(object sender, System.EventArgs e)
-    {
-        Animatewindow();
-    }
-
-    private void Afirmations_OnTabClosed(object sender, System.EventArgs e)
-    {
-        Animatewindow();
-    }
-    private void Animatewindow()
-    {
-        animator.SetBool(IS_OPEN, base.TemplateState);
     }
 }

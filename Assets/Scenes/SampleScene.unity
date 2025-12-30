@@ -939,6 +939,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 916018b868090c7429562d11bda0a34e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Tasks
+  Template:
+  - {fileID: 1731701630}
+  - {fileID: 1511975957}
+  - {fileID: 2108179097}
+  - {fileID: 1294963751}
+  toggleButton: {fileID: 273907667}
+  closeButton: {fileID: 1294963753}
   TaskInput: {fileID: 1353944694}
   CreateButton: {fileID: 715497536}
   taskContainer: {fileID: 1911697822}
@@ -1315,7 +1322,6 @@ GameObject:
   m_Component:
   - component: {fileID: 373668099}
   - component: {fileID: 373668100}
-  - component: {fileID: 373668101}
   m_Layer: 5
   m_Name: Pomodoro
   m_TagString: Untagged
@@ -1370,28 +1376,6 @@ MonoBehaviour:
   ResetButton: {fileID: 838875676}
   IncreaseButton: {fileID: 918689890}
   DecreaseButton: {fileID: 43662771}
---- !u!95 &373668101
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 373668098}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 9d6234a331ac6c14694de29a32b1379c, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &463112161
 GameObject:
   m_ObjectHideFlags: 0
@@ -2936,7 +2920,6 @@ GameObject:
   m_Component:
   - component: {fileID: 812631733}
   - component: {fileID: 812631734}
-  - component: {fileID: 812631735}
   m_Layer: 5
   m_Name: Affirmations
   m_TagString: Untagged
@@ -2993,28 +2976,6 @@ MonoBehaviour:
   - Keep going
   - Im here for you
   - progress takes time
---- !u!95 &812631735
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 812631732}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 9d6234a331ac6c14694de29a32b1379c, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &838875674
 GameObject:
   m_ObjectHideFlags: 0
@@ -3826,7 +3787,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0.50054073, b: 1, a: 1}
+  m_Color: {r: 0, g: 0.445135, b: 0.8867924, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -5249,7 +5210,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0.50054073, b: 1, a: 1}
+  m_Color: {r: 0, g: 0.44705883, b: 0.8901961, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -6502,7 +6463,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0.50054073, b: 1, a: 1}
+  m_Color: {r: 0, g: 0.44705883, b: 0.8901961, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1

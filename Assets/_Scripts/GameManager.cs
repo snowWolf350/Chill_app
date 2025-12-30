@@ -15,20 +15,19 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        currentExp = PlayerPrefs.GetInt(CURRENTEXP);
-        if (level == 0)
-            LevelUp();
-        level = PlayerPrefs.GetInt(CURRENTLEVEL);
+        currentExp = PlayerPrefs.GetInt(CURRENTEXP,0);
+        level = PlayerPrefs.GetInt(CURRENTLEVEL,1);
         TaskTemplate.OnTaskCompleted += TaskTemplate_OnTaskCompleted;
-        MaxExp = 100;
-        StatsUI.updateExpUI(currentExp, MaxExp, level);
+
         foreach (LevelSO levelSO in LevelSoList)
         {
             if (level == levelSO.level)
             {
                 MaxExp = levelSO.maxExp;
+                break;
             }
         }
+        StatsUI.updateExpUI(currentExp, MaxExp, level);
     }
 
     private void TaskTemplate_OnTaskCompleted(object sender, System.EventArgs e)
@@ -49,6 +48,7 @@ public class GameManager : MonoBehaviour
         }
         PlayerPrefs.SetInt(CURRENTLEVEL, level);
         PlayerPrefs.SetInt(CURRENTEXP,currentExp);
+        PlayerPrefs.Save();
     }
     public void LevelUp()
     {
@@ -64,6 +64,7 @@ public class GameManager : MonoBehaviour
         StatsUI.updateExpUI(currentExp, MaxExp, level);
         PlayerPrefs.SetInt(CURRENTLEVEL, level);
         PlayerPrefs.SetInt(CURRENTEXP, currentExp);
+        PlayerPrefs.Save();
     }
     [ContextMenu("increase xp")]
     public void increaseXPMax()
