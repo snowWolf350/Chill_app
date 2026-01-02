@@ -8,10 +8,13 @@ public class Pomodoro : ButtonScript
     [Header("Text")]
     [SerializeField] TextMeshProUGUI CountDownText;
     [Header("Buttons")]
-    [SerializeField] Button StartButton;
+    [SerializeField] Button PlayButton;
     [SerializeField] Button ResetButton;
     [SerializeField] Button IncreaseButton;
     [SerializeField] Button DecreaseButton;
+    [Header("Play Toggle")]
+    [SerializeField] Sprite pauseSprite;
+    [SerializeField] Sprite playSprite;
 
     float minutes;
     float seconds;
@@ -21,9 +24,17 @@ public class Pomodoro : ButtonScript
     protected override void Awake()
     {
         base.Awake();
-        StartButton.onClick.AddListener(() =>
+        PlayButton.onClick.AddListener(() =>
         {
             isCounting = !isCounting;
+            if (isCounting)
+            {
+                PlayButton.image.sprite = pauseSprite;
+            }
+            else
+            {
+                PlayButton.image.sprite = playSprite;
+            }
         });
         ResetButton.onClick.AddListener(() =>
         {

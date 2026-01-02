@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33ba94f5e6c1bf14ca596ab169c9fe78, type: 3}
+  m_Name: AffirmationList
+  m_EditorClassIdentifier: Assembly-CSharp::AffirmationSO
+  AffirmationList:
+  - "\u201CBe yourself; everyone else is already taken.\u201D\r\n\u2015 Oscar Wilde"
+  - "\u201CYou only live once, but if you do it right, once is enough.\u201D\r\n\u2015
+    Mae West"
+  - "\u201CIn three words I can sum up everything I've learned about life: it goes
+    on.\u201D\r\n\u2015 Robert Frost"
+  - "\u201CTo live is the rarest thing in the world. Most people exist, that is all.\u201D\r\n\u2015
+    Oscar Wilde"
+  - "\u201CAlways forgive your enemies; nothing annoys them so much.\u201D\r\n\u2015
+    Oscar Wilde"

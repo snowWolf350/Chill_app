@@ -4,7 +4,7 @@ using UnityEngine.EventSystems;
 public class ButtonSingleUI : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     Vector3 shrinkScale = Vector3.one;
-    Vector3 expandScale = new Vector3(1.1f,1.1f,1.1f);
+    [SerializeField]Vector3 expandScale = new Vector3(1.1f,1.1f,1.1f);
 
     RectTransform rectTransform;
 

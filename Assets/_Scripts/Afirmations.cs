@@ -1,14 +1,16 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.Rendering;
 using UnityEngine.UI;
-using System.Collections.Generic;
 
 public class Afirmations : ButtonScript
 {
     [SerializeField] Button NewQuoteButton;
     [SerializeField] TextMeshProUGUI QuoteText;
-    [SerializeField] List<string> QuotesList;
+    [SerializeField] AffirmationSO affirmationSO;
 
+    string currentQuote;
+    string newQuote;
 
     protected override void Awake()
     {
@@ -26,6 +28,14 @@ public class Afirmations : ButtonScript
     }
     private void UpdateQuoteUI()
     {
-        QuoteText.text = QuotesList[Random.Range(0, QuotesList.Count - 1)];
+
+        do
+        {
+            newQuote = affirmationSO.AffirmationList[Random.Range(0, affirmationSO.AffirmationList.Count)];
+        } while (newQuote == currentQuote);
+
+        currentQuote = newQuote;
+
+        QuoteText.text = currentQuote;
     }
 }

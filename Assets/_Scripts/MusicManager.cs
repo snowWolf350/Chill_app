@@ -13,6 +13,9 @@ public class MusicManager : ButtonScript
     [Header("Buttons")]
     [SerializeField] Button pauseButton;
     [SerializeField] Button nextButton;
+    [Header("Play Toggle")]
+    [SerializeField] Sprite pauseSprite;
+    [SerializeField] Sprite playSprite;
 
     MusicSO currentMusicSO;
     AudioSource AudioSource;
@@ -27,6 +30,14 @@ public class MusicManager : ButtonScript
         pauseButton.onClick.AddListener(() =>
         {
             pauseMusic();
+            if (isPlaying)
+            {
+                pauseButton.image.sprite = pauseSprite;
+            }
+            else
+            {
+                pauseButton.image.sprite = playSprite;
+            }
         });
         nextButton.onClick.AddListener(() =>
         {
