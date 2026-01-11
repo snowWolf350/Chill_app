@@ -1185,6 +1185,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: aecba9a32d7230e47bbe8703ff1011e1, type: 2}
   - {fileID: 11400000, guid: e29709b460718cc428308968721d6fdf, type: 2}
   - {fileID: 11400000, guid: a3064d2d8a7e5f449b770ee9093395ea, type: 2}
+  - {fileID: 11400000, guid: bb616484ecfa121469011cfa12469774, type: 2}
   musicText: {fileID: 386719358}
   artistText: {fileID: 279377722}
   pauseButton: {fileID: 1952977434}
