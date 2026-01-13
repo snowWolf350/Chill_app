@@ -32,7 +32,7 @@ public class BackgroundManager : MonoBehaviour
     private void changeBackground()
     {
         do
-            newbackgroundSO = backgroundListSO.backgroundListSO[UnityEngine.Random.Range(0, backgroundListSO.backgroundListSO.Count - 1)];
+            newbackgroundSO = backgroundListSO.backgroundListSO[UnityEngine.Random.Range(0, backgroundListSO.backgroundListSO.Count)];
         while (newbackgroundSO == currentbackgroundSO);
         currentbackgroundSO = newbackgroundSO;
 

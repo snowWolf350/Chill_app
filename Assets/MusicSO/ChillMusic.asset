@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7dd7357716e6d204f96ad89c746828f6, type: 3}
   m_Name: ChillMusic
   m_EditorClassIdentifier: Assembly-CSharp::MusicSO
-  audioClip: {fileID: 0}
-  songName: 
-  songMaker: 
+  audioClip: {fileID: 8300000, guid: c2576a4455995204ea464e011ab445cd, type: 3}
+  songName: Chill-music
+  songMaker: The_Mountain

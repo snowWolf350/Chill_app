@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7dd7357716e6d204f96ad89c746828f6, type: 3}
   m_Name: chill-lofi-beat
   m_EditorClassIdentifier: Assembly-CSharp::MusicSO
-  audioClip: {fileID: 0}
-  songName: 
-  songMaker: 
+  audioClip: {fileID: 8300000, guid: 052e3939bb401014aa4728e7804dc9c7, type: 3}
+  songName: chill-lofi-beat
+  songMaker: Tunetank

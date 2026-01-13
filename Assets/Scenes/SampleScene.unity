@@ -242,7 +242,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -114.47589, y: -41.742615, z: -113.626526, w: -58.781097}
+  m_margin: {x: -129.19775, y: -52.449524, z: -129.68695, w: -80.19495}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1186,6 +1186,12 @@ MonoBehaviour:
   - {fileID: 11400000, guid: e29709b460718cc428308968721d6fdf, type: 2}
   - {fileID: 11400000, guid: a3064d2d8a7e5f449b770ee9093395ea, type: 2}
   - {fileID: 11400000, guid: bb616484ecfa121469011cfa12469774, type: 2}
+  - {fileID: 11400000, guid: 96da17a4f3a7f34478860e4a0b8cba06, type: 2}
+  - {fileID: 11400000, guid: 9ac64b3a72e85f14f88db762815cfaa7, type: 2}
+  - {fileID: 11400000, guid: 9efc04383d534e64a99ca8e20fe145bc, type: 2}
+  - {fileID: 11400000, guid: 787b918dff127d9488056e28a8717cba, type: 2}
+  - {fileID: 11400000, guid: 0232dddc0a2c43c4197ead958ebf0852, type: 2}
+  - {fileID: 11400000, guid: fe64078fcb0251e4da3449448dbd8b99, type: 2}
   musicText: {fileID: 386719358}
   artistText: {fileID: 279377722}
   pauseButton: {fileID: 1952977434}
@@ -1338,6 +1344,7 @@ MonoBehaviour:
   - {fileID: 2033470855}
   - {fileID: 1731701632}
   - {fileID: 1042100803}
+  - {fileID: 1548589847}
   lightBackground:
   - {fileID: 53908084}
   - {fileID: 1795504853}
@@ -2425,6 +2432,8 @@ MonoBehaviour:
   OnTaskCompleteAudio: {fileID: 8300000, guid: 22eb592d595215d4c9f50e602cb1eb9d, type: 3}
   OnTaskRemoveAudio: {fileID: 8300000, guid: ddb14ebc028427f4986a08204d14c8a1, type: 3}
   OnTaskAddedAudio: {fileID: 8300000, guid: 362b573b87783fe4294de7eed3f4b4d6, type: 3}
+  OnPomodoroFinishedAudio: {fileID: 8300000, guid: 6688898cbd3f05a4f81695c7c131d4d3, type: 3}
+  OnLevelUpAudio: {fileID: 8300000, guid: 4052655e9bcaa1346b876ed286fd09bd, type: 3}
 --- !u!4 &516513054
 Transform:
   m_ObjectHideFlags: 0
@@ -2521,7 +2530,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 1, g: 1, b: 1, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -4640,7 +4649,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: -5177388603050735206, guid: 8884154dfe85442a3a3578be807dbcdf, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -6026,7 +6035,7 @@ GameObject:
   - component: {fileID: 1548589848}
   - component: {fileID: 1548589847}
   m_Layer: 5
-  m_Name: Image
+  m_Name: levelBackground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6071,8 +6080,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
+  m_Sprite: {fileID: -5177388603050735206, guid: 8884154dfe85442a3a3578be807dbcdf, type: 3}
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -7546,7 +7555,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -255.76, y: 0}
+  m_AnchoredPosition: {x: -165.76, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1973952919
@@ -7659,7 +7668,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -65, y: -0.00039672852}
+  m_AnchoredPosition: {x: 25, y: -0.00039672852}
   m_SizeDelta: {x: 270, y: 119.74}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1990790968

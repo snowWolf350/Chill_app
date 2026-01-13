@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7dd7357716e6d204f96ad89c746828f6, type: 3}
   m_Name: chill-lofi-16
   m_EditorClassIdentifier: Assembly-CSharp::MusicSO
-  audioClip: {fileID: 0}
-  songName: 
-  songMaker: 
+  audioClip: {fileID: 8300000, guid: 4d988884a9dbe3346ac4f9ee565b4d28, type: 3}
+  songName: chill-lofi-160893
+  songMaker: SoulProdMusic
