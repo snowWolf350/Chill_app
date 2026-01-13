@@ -23,7 +23,7 @@ public class MusicManager : ButtonScript
     bool isPlaying = true;
     const int initialVolume = 0;
 
-    float finalVolume = 0.25f;
+    float finalVolume = 0.15f;
 
     protected override void Awake()
     {
