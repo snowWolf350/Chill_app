@@ -6,4 +6,10 @@ It was pretty fun trying and using unity as an app development tool.
 <ul>
 <li>Using built in interfaces to make draggavle windows.</li>
 <li>efficiently storing and using data using scriptable objects</li>
+<li>saving using player prefs</li>
+<li>Keeping a version check</li>
 </ul>
+
+Here's the itch page : <a href = "https://freakmeout350.itch.io/productivity-app">Productivity app</a>
+
+<h3>Images of the app : </h3>
